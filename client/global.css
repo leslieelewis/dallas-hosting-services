@@ -103,4 +103,41 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer components {
+  /* Smooth text rendering */
+  .text-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Custom backdrop blur utilities */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
 }
